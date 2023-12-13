@@ -11,7 +11,7 @@ if b ==1:
 elif b == 2:
     x = int(input("questions incorrect= "))
 else:
-    print("error (re-enter number without spaces)")
+    print("ERROR! (re-enter number without spaces please (:   ))")
 if b == 1:
     qc = x
 elif b == 2:
@@ -19,17 +19,23 @@ elif b == 2:
 else:
     print("error")
 
-fm = (qc*3+1) #math final total questions correct
-p = (2/3)*100 #total questions correct on python
-e = 100 #everything else i got 100% on
 m1 = 88.57 #midterm1
 m3 = 83.51 #midterm3
 m2 = 70 #midterm2 might get replaced
+p = 2
+
+fm = (qc*3+1) #math final total questions correct
+p = (p/3)*100 #total questions correct on python
+e = 100 #everything else i got 100% on
 f = fm*(18/21) + p*(3/21) #final (test) score
-if f > m2:
+
+j = [m1,m2,m3]
+j = (sorted(j))
+print(j[0])
+if f > j[0]:
     m2 = f
 else:
     m2 = m2
 fg = (e*15 + 18*(m1+m2+m3) + f*21)/(21+18*3+15)
-
+print(m2)
 print("final grade= ", fg)
