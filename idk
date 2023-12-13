@@ -1,0 +1,35 @@
+#math 257 grade
+#grades in percents
+print("press 1 or 2")
+print("1- questions you have to get correct")
+print("2- questions you can get incorrect")
+b = int(input("number = "))
+print("")
+print("")
+if b ==1:
+    x = int(input("questions correct= "))
+elif b == 2:
+    x = int(input("questions incorrect= "))
+else:
+    print("error (re-enter number without spaces)")
+if b == 1:
+    qc = x
+elif b == 2:
+    qc = 33-x
+else:
+    print("error")
+
+fm = (qc*3+1) #math final total questions correct
+p = (2/3)*100 #total questions correct on python
+e = 100 #everything else i got 100% on
+m1 = 88.57 #midterm1
+m3 = 83.51 #midterm3
+m2 = 70 #midterm2 might get replaced
+f = fm*(18/21) + p*(3/21) #final (test) score
+if f > m2:
+    m2 = f
+else:
+    m2 = m2
+fg = (e*15 + 18*(m1+m2+m3) + f*21)/(21+18*3+15)
+
+print("final grade= ", fg)
